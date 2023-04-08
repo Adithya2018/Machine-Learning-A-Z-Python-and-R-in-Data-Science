@@ -34,7 +34,9 @@ training_set = subset(dataset, split == TRUE)
 test_set = subset(dataset, split == FALSE)
 
 
-
+# Feature Scaling
+training_set[,2:3] = scale(training_set[,2:3])
+test_set[,2:3] = scale(test_set[,2:3])
 
 
 
